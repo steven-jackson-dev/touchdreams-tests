@@ -1,0 +1,151 @@
+/* Globals */
+body {
+    font-family: Arial;
+    background-color: #f3f3f3;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+/* //Globals */
+
+/* Container */
+main.container {
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 4em;
+}
+
+/* /Container */
+
+/* Layout */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.column {
+    flex-direction: column;
+    display: flex;
+    flex: 1 1;
+    width: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template: auto 1fr auto / auto 1fr auto;
+}
+
+/* /Layout */
+
+
+/* Section */
+section {
+    padding: 2em 0;
+}
+
+section div {
+    padding: 0 1em;
+}
+
+/* /Section */
+
+
+/* Cards */
+div.sj-card-wrapper {
+    position: relative;
+    margin: 0 auto;
+    height: 250px;
+    width: 250px;
+}
+
+div.sj-card {
+    background-color: rgb(247, 247, 247);
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 5px;
+    color: rgb(153, 153, 153);
+    padding: 0;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    text-align: center;
+    top: 30px;
+    left: 30px;
+    box-shadow: rgba(0, 0, 0, 0.09) 1px 1px 8px 0px;
+
+}
+
+div.sj-card p {
+    transform: translate(0%, 60px);
+}
+
+/* /Cards */
+
+/* Masonry Grid Layout */
+section.sj-masonry-layout .column {
+    box-shadow: rgba(0, 0, 0, 0.09) 1px 1px 8px 0px;
+    background-color: rgb(218, 218, 218);
+}
+
+div.masonry-grid {
+    grid-column-gap: 1em;
+    -webkit-column-gap: 1em;
+    column-gap: 1em;
+    max-height: 310px;
+    column-count: 3;
+}
+
+div.masonry-grid>.column {
+    display: inline-block;
+    margin: 0 0 1em;
+    max-width: 100%;
+    width: 100%;
+}
+
+/* /Masonry Grid Layout */
+
+/* Shape */
+
+section.sj-shape div.triangle {
+    margin: 0 auto;
+    width: 86px;
+    height: 77px;
+    padding: 0;
+    background: linear-gradient(to bottom right, #fff 50%, rgb(218, 218, 218) 50%);
+}
+
+/* /Shape */
+
+
+@media screen and (max-width: 640px) {
+    main.container {
+        padding: 0 2em;
+    }
+
+    .column {
+        flex: 1 150px;
+    }
+
+    section div {
+        padding: 1em;
+    }
+
+    section.sj-cards {
+        padding: 0em;
+    }
+
+    div.sj-card-wrapper {
+        padding: 0;
+    }
+
+    div.masonry-grid {
+        max-height: 100%;
+        column-count: 1;
+        text-align: center;
+    }
+
+}
